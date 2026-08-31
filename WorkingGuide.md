@@ -191,3 +191,38 @@ Agar samajh na aaye toh team member se pooch lo.
 ---
 
 **Best of Luck! Mil ke achha project banate hain!**
+
+---
+
+## Team Responsibilities — Hospital AI System
+
+The project is divided into 5 independent components. Each member must work only inside their assigned component/folder and communicate with other components through clearly defined APIs/contracts.
+
+### 1. Hospital Operations — Fatimah
+
+Build and maintain the Hospital Operations backend and APIs. This includes hospitals, departments, doctors, patients, appointments, staff, rooms, beds, bed assignments, hospital capacity, doctor/bed availability, emergency operations, patient location and operational search. This service is the operational source of truth for the hospital system.
+
+### 2. Brain / Orchestrator Agent — Member 1
+
+Build the central AI orchestrator that receives the user's request, identifies the user's intent, maintains conversation context and routes the request to the correct specialist agent. It should coordinate responses from Hospital Operations, Billing & Insurance, Patient Care and Reception agents without duplicating their business logic.
+
+### 3. Billing & Insurance Agent — Member 2
+
+Build the billing and insurance specialist. It should handle billing workflows, insurance information/eligibility, claim preparation, claim status, rejected claims and related hospital financial/insurance operations. It must communicate with the Hospital Operations service through its documented APIs when hospital/patient/appointment data is required.
+
+### 4. Patient Care / Clinical Support Agent — Member 3
+
+Build the patient-care specialist for intake and clinical-support workflows. It should handle patient symptoms/intake, basic urgency/triage support, department or doctor routing and patient-care workflow coordination. It must NOT provide medical diagnosis or replace a qualified medical professional.
+
+### 5. Reception / Patient Access Agent — Member 4
+
+Build the reception and patient-access specialist. It should handle patient registration, appointment booking, doctor lookup, check-in/check-out and common reception queries. It should use Hospital Operations APIs for doctors, patients, departments and appointments instead of maintaining duplicate hospital data.
+
+### Integration Rule
+
+The Hospital Operations backend, Billing & Insurance, Patient Care, Reception and Brain/Orchestrator components must remain clearly separated.
+
+- Do NOT duplicate another member's business logic or database.
+- Cross-component communication must happen through documented APIs/contracts.
+- Each member is responsible for their own tests, documentation and integration contract.
+- Before modifying another member's component, coordinate with that member and get team approval.
