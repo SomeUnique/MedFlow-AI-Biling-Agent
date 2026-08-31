@@ -4,6 +4,20 @@ Yeh guide hai hamare project mein kaise kaam karna hai. Sab log isko follow kare
 
 ---
 
+## Hamara Team
+
+| Member | Branch Name | Role |
+|--------|-------------|------|
+| Fatima (Project Leader) | `main` | Backend API, Architecture, Code Review |
+| Nameera | `nameera` | Frontend / UI |
+| Zarwish | `zarwish` | AI Agent / LLM Integration |
+| Minal | `minal` | Database / Backend |
+| Sumiya | `sumiya` | Testing / QA |
+
+> **Note:** Har member ki apni branch hai. Kabhi bhi `main` pe direct push mat karo.
+
+---
+
 ## Hamara Goal
 
 Hum sab mil ke ek project bana rahe hain. Sab log ek hi repository mein kaam karein gi, lekin har kisi ki **apni alag branch** hogi. Jab kaam ho jaye toh hum usko **main branch** mein merge kar dein ge.
