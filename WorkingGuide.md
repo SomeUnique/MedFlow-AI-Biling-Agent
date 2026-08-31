@@ -8,13 +8,15 @@ Yeh guide hai hamare project mein kaise kaam karna hai. Sab log isko follow kare
 
 | Member | Branch Name | Role |
 |--------|-------------|------|
-| Fatima (Project Leader) | `main` | Backend API, Architecture, Code Review |
-| Nameera | `nameera` | Frontend / UI |
-| Zarwish | `zarwish` | AI Agent / LLM Integration |
-| Minal | `minal` | Database / Backend |
-| Sumiya | `sumiya` | Testing / QA |
+| Fatimah (Project Leader) | `fatimah` | Hospital Operations (Backend/APIs) |
+| Nameera | `nameera` | Brain / Orchestrator Agent |
+| Zarwish | `zarwish` | Billing & Insurance Agent |
+| Minal | `minal` | Patient Care / Clinical Support Agent |
+| Sumiya | `sumiya` | Reception / Patient Access Agent |
 
 > **Note:** Har member ki apni branch hai. Kabhi bhi `main` pe direct push mat karo.
+>
+> **Working Guide** root pe sab ke liye shared file hai. Baaki saara asli code apni apni branch pe hai.
 
 ---
 
@@ -202,19 +204,19 @@ The project is divided into 5 independent components. Each member must work only
 
 Build and maintain the Hospital Operations backend and APIs. This includes hospitals, departments, doctors, patients, appointments, staff, rooms, beds, bed assignments, hospital capacity, doctor/bed availability, emergency operations, patient location and operational search. This service is the operational source of truth for the hospital system.
 
-### 2. Brain / Orchestrator Agent — Member 1
+### 2. Brain / Orchestrator Agent — Nameera
 
 Build the central AI orchestrator that receives the user's request, identifies the user's intent, maintains conversation context and routes the request to the correct specialist agent. It should coordinate responses from Hospital Operations, Billing & Insurance, Patient Care and Reception agents without duplicating their business logic.
 
-### 3. Billing & Insurance Agent — Member 2
+### 3. Billing & Insurance Agent — Zarwish
 
 Build the billing and insurance specialist. It should handle billing workflows, insurance information/eligibility, claim preparation, claim status, rejected claims and related hospital financial/insurance operations. It must communicate with the Hospital Operations service through its documented APIs when hospital/patient/appointment data is required.
 
-### 4. Patient Care / Clinical Support Agent — Member 3
+### 4. Patient Care / Clinical Support Agent — Minal
 
 Build the patient-care specialist for intake and clinical-support workflows. It should handle patient symptoms/intake, basic urgency/triage support, department or doctor routing and patient-care workflow coordination. It must NOT provide medical diagnosis or replace a qualified medical professional.
 
-### 5. Reception / Patient Access Agent — Member 4
+### 5. Reception / Patient Access Agent — Sumiya
 
 Build the reception and patient-access specialist. It should handle patient registration, appointment booking, doctor lookup, check-in/check-out and common reception queries. It should use Hospital Operations APIs for doctors, patients, departments and appointments instead of maintaining duplicate hospital data.
 
